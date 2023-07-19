@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
 
+ nombre de la arquitectura con la que trabajas este proyecto  "Structure the app such that you can locate code quickly" "Estructurar la aplicación de forma que se pueda localizar el código rápidamente"  puedes ver más sobre esta estructura aqui `https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7`
+
 # Instalaciones necesarias en tu equipo:
 
  -node js, debe ser una version compatible con angular 
@@ -71,3 +73,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Generar modulos
 
 Run `ng g m  nombre-modulo-ubicacion` te crea la carpeta mas dos archivos
+
+## Generar modulo compartido dentro de carpeta existente shared
+
+`ng g m shared/shared --flat` crea el archivo sin crear carpeta adicional

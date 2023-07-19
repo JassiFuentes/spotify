@@ -3,17 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ExampleComponent } from './example/example.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ExampleComponent
+  //Aqui declaramos los componentes, directivas...
+  declarations: [//TODO:se declaran componentes, directivas, pipes
+    AppComponent
   ],
-  imports: [
+  //Aqui imporatmos los modulos
+  imports: [//TODO: solo se importan otros modules
     BrowserModule,
     AppRoutingModule
   ],
+  //puedo exportar lo que declare, generalmente se usa para el modulo compartido
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ExampleComponent } from './example/example.component';
 
 //Aqui declaro mis rutas, la rutas seran objetos
 const routes: Routes = [
-  //Ruta ppal
+  //Ruta ppal o raiz
   {
-    path: '',//string vacio hace referencia a la ruta localhost:4200/
-    component:ExampleComponent// este es el recurso que usara la ruta que definimos, debemos asegurarnos de que se importe
-  },
-  // Otra ruta
-  {
-    path: 'hello',//hace referencia a localhost:4200/hello
-    component:ExampleComponent
+    path:'', //TODO: localhost:4200/
+    //en vez de usar la pdad component, usaremos loadChildren para la carga perezosa ya que las aplicaciones crecen, usamos una importacion dinamica y alli cargamos la ruta del modulo que usaremos
+    loadChildren:() => import(`./modules/home/home.module`).then(m => m.HomeModule),//Promesa
   }
+
+
 
 ];
 
